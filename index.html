@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TASTAMA is an AI-powered platform for UNT preparation: diagnostics, personalized study paths, mistake analysis, mock exams, and teacher analytics." />
+  <meta name="theme-color" content="#10130F" />
+  <meta property="og:title" content="TASTAMA — AI-powered UNT preparation" />
+  <meta property="og:description" content="Personalized preparation for students. Actionable analytics for teachers and education centers." />
+  <meta property="og:type" content="website" />
+  <title>TASTAMA — AI-powered UNT preparation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="TASTAMA home">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span class="brand-word">TASTAMA</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#product" data-i18n="nav.product">Product</a>
+        <a href="#students" data-i18n="nav.students">Students</a>
+        <a href="#centers" data-i18n="nav.centers">Education centers</a>
+        <a href="#ai" data-i18n="nav.ai">AI</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="language-switcher" role="group" aria-label="Language selector">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="kz">KZ</button>
+        </div>
+        <a class="button button-small button-dark js-platform-link" href="#product" data-i18n="nav.open">Open platform</a>
+        <button class="mobile-menu-button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="#product" data-i18n="nav.product">Product</a>
+      <a href="#students" data-i18n="nav.students">Students</a>
+      <a href="#centers" data-i18n="nav.centers">Education centers</a>
+      <a href="#ai" data-i18n="nav.ai">AI</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <div class="mobile-languages" role="group" aria-label="Language selector">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="kz">KZ</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">Built for Kazakhstan's UNT journey</span></div>
+          <h1 data-i18n="hero.title">Know what to learn next. <span>Every single time.</span></h1>
+          <p class="hero-lead" data-i18n="hero.lead">TASTAMA turns tests, mistakes and learning activity into a clear study path — for students, teachers and education centers.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#product" data-i18n="hero.ctaPrimary">See how TASTAMA works</a>
+            <a class="button button-ghost" href="#centers" data-i18n="hero.ctaSecondary">For education centers</a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-item">
+              <span class="proof-icon">01</span>
+              <div><strong data-i18n="hero.proof1Title">Diagnose</strong><span data-i18n="hero.proof1Text">Find weak topics</span></div>
+            </div>
+            <div class="proof-item">
+              <span class="proof-icon">02</span>
+              <div><strong data-i18n="hero.proof2Title">Understand</strong><span data-i18n="hero.proof2Text">AI explains mistakes</span></div>
+            </div>
+            <div class="proof-item">
+              <span class="proof-icon">03</span>
+              <div><strong data-i18n="hero.proof3Title">Improve</strong><span data-i18n="hero.proof3Text">Track progress by topic</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-1" aria-label="TASTAMA product preview">
+          <div class="dashboard-shell">
+            <div class="dash-topbar">
+              <div class="dash-brand"><span class="mini-mark">T</span>TASTAMA</div>
+              <div class="dash-pill" data-i18n="mock.beta">Product preview</div>
+            </div>
+            <div class="dash-layout">
+              <aside class="dash-sidebar">
+                <div class="side-item active"><span class="side-dot"></span><span data-i18n="mock.today">Today</span></div>
+                <div class="side-item"><span class="side-dot"></span><span data-i18n="mock.practice">Practice</span></div>
+                <div class="side-item"><span class="side-dot"></span><span data-i18n="mock.theory">Theory</span></div>
+                <div class="side-item"><span class="side-dot"></span><span data-i18n="mock.results">Results</span></div>
+              </aside>
+              <div class="dash-content">
+                <div class="score-card">
+                  <div>
+                    <span class="card-label" data-i18n="mock.current">Current diagnostic</span>
+                    <div class="score-line"><strong>87</strong><span>/ 140</span></div>
+                  </div>
+                  <div class="score-ring"><span>62%</span></div>
+                </div>
+
+                <div class="next-step-card">
+                  <div class="next-step-label" data-i18n="mock.next">Next best step</div>
+                  <h3 data-i18n="mock.topic">Kazakh Khanate: key dates</h3>
+                  <p data-i18n="mock.topicText">Review the short note, then solve 5 targeted questions.</p>
+                  <div class="micro-progress"><span style="width: 64%"></span></div>
+                </div>
+
+                <div class="dash-columns">
+                  <div class="weak-card">
+                    <div class="card-label" data-i18n="mock.weak">Weak topics</div>
+                    <div class="topic-row"><span data-i18n="mock.t1">Kazakhstan history</span><b>48%</b></div>
+                    <div class="topic-bar"><span style="width:48%"></span></div>
+                    <div class="topic-row"><span data-i18n="mock.t2">Math literacy</span><b>57%</b></div>
+                    <div class="topic-bar"><span style="width:57%"></span></div>
+                    <div class="topic-row"><span data-i18n="mock.t3">Reading literacy</span><b>71%</b></div>
+                    <div class="topic-bar"><span style="width:71%"></span></div>
+                  </div>
+                  <div class="ai-card">
+                    <div class="ai-badge">AI</div>
+                    <div class="card-label" data-i18n="mock.aiTitle">Mistake analysis</div>
+                    <p data-i18n="mock.aiText">You confused the cause with the consequence. Compare the two events, then retry a similar question.</p>
+                    <button type="button" data-i18n="mock.explain">Explain simpler</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-chip chip-one"><span>↑</span><strong data-i18n="mock.chip1">Topic mastery updated</strong></div>
+          <div class="floating-chip chip-two"><span>AI</span><strong data-i18n="mock.chip2">Personal next step</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-inner">
+        <span data-i18n="trust.label">One product, two directions</span>
+        <div class="trust-divider"></div>
+        <strong data-i18n="trust.b2c">B2C — UNT preparation</strong>
+        <div class="trust-divider"></div>
+        <strong data-i18n="trust.b2b">B2B — platform for education centers</strong>
+      </div>
+    </section>
+
+    <section class="section product-section" id="product">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow dark"><span class="eyebrow-dot"></span><span data-i18n="product.eyebrow">The product</span></div>
+          <h2 data-i18n="product.title">From “I got it wrong” to <span>“I know what to do next.”</span></h2>
+          <p data-i18n="product.lead">TASTAMA connects diagnostics, content, practice and AI feedback in one learning loop.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <div class="step-number">01</div>
+            <div class="step-art diagnosis-art" aria-hidden="true">
+              <span class="diag-line l1"></span><span class="diag-line l2"></span><span class="diag-line l3"></span>
+              <div class="diag-score">87<span>/140</span></div>
+            </div>
+            <h3 data-i18n="product.s1Title">Diagnostic testing</h3>
+            <p data-i18n="product.s1Text">See the current level and identify exactly where points are being lost.</p>
+          </article>
+          <article class="step-card reveal delay-1">
+            <div class="step-number">02</div>
+            <div class="step-art map-art" aria-hidden="true">
+              <span class="map-node n1"></span><span class="map-node n2"></span><span class="map-node n3"></span><span class="map-path p1"></span><span class="map-path p2"></span>
+            </div>
+            <h3 data-i18n="product.s2Title">Personal study path</h3>
+            <p data-i18n="product.s2Text">The next task is based on weak topics instead of a generic one-size-fits-all sequence.</p>
+          </article>
+          <article class="step-card reveal delay-2">
+            <div class="step-number">03</div>
+            <div class="step-art explain-art" aria-hidden="true">
+              <div class="explain-bubble">AI</div>
+              <span class="explain-line e1"></span><span class="explain-line e2"></span><span class="explain-line e3"></span>
+            </div>
+            <h3 data-i18n="product.s3Title">AI mistake analysis</h3>
+            <p data-i18n="product.s3Text">AI explains what went wrong in plain language and points the student back to the right concept.</p>
+          </article>
+          <article class="step-card reveal delay-3">
+            <div class="step-number">04</div>
+            <div class="step-art progress-art" aria-hidden="true">
+              <span class="bar b1"></span><span class="bar b2"></span><span class="bar b3"></span><span class="bar b4"></span>
+            </div>
+            <h3 data-i18n="product.s4Title">Progress that is visible</h3>
+            <p data-i18n="product.s4Text">Students and teachers see topic-level progress instead of only a final test score.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section student-section" id="students">
+      <div class="container split-layout">
+        <div class="split-copy reveal">
+          <div class="eyebrow dark"><span class="eyebrow-dot"></span><span data-i18n="students.eyebrow">For students</span></div>
+          <h2 data-i18n="students.title">Preparation that reacts to <span>your mistakes.</span></h2>
+          <p data-i18n="students.lead">A student should not have to guess what to study tonight. TASTAMA makes the next action obvious.</p>
+          <div class="feature-list">
+            <div class="feature-row"><span>✓</span><div><strong data-i18n="students.f1Title">Mock UNT and focused practice</strong><p data-i18n="students.f1Text">Train under exam-like conditions, then drill only the topics that need attention.</p></div></div>
+            <div class="feature-row"><span>✓</span><div><strong data-i18n="students.f2Title">Theory linked to practice</strong><p data-i18n="students.f2Text">Move directly from an error to the relevant explanation and another attempt.</p></div></div>
+            <div class="feature-row"><span>✓</span><div><strong data-i18n="students.f3Title">Personal progress view</strong><p data-i18n="students.f3Text">See strengths, weak areas and improvement over time.</p></div></div>
+          </div>
+        </div>
+        <div class="phone-stage reveal delay-1">
+          <div class="phone phone-back">
+            <div class="phone-screen simple-screen">
+              <div class="phone-head"><span>TASTAMA</span><i></i></div>
+              <div class="tiny-label" data-i18n="students.phonePractice">Today's practice</div>
+              <div class="phone-progress"><span style="width:70%"></span></div>
+              <div class="question-card"><small>12 / 20</small><strong data-i18n="students.phoneQuestion">Which event happened first?</strong><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="phone phone-front">
+            <div class="phone-screen">
+              <div class="phone-head"><span>TASTAMA</span><i></i></div>
+              <div class="tiny-label" data-i18n="students.phonePlan">My study plan</div>
+              <h4 data-i18n="students.phoneToday">Today</h4>
+              <div class="phone-task active"><b>1</b><div><strong data-i18n="students.phoneTask1">Kazakh Khanate</strong><span data-i18n="students.phoneTask1meta">12 min · theory</span></div></div>
+              <div class="phone-task"><b>2</b><div><strong data-i18n="students.phoneTask2">Targeted practice</strong><span data-i18n="students.phoneTask2meta">5 questions</span></div></div>
+              <div class="phone-task"><b>3</b><div><strong data-i18n="students.phoneTask3">Mistake review</strong><span data-i18n="students.phoneTask3meta">AI explanation</span></div></div>
+              <div class="phone-insight"><span>↗</span><div><small data-i18n="students.phoneInsightLabel">This week</small><strong data-i18n="students.phoneInsight">2 topics improved</strong></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section b2b-section" id="centers">
+      <div class="container">
+        <div class="b2b-shell reveal">
+          <div class="b2b-copy">
+            <div class="eyebrow light"><span class="eyebrow-dot"></span><span data-i18n="centers.eyebrow">For education centers</span></div>
+            <h2 data-i18n="centers.title">Your teaching. <span>Your content.</span> One operating platform.</h2>
+            <p data-i18n="centers.lead">TASTAMA can become the digital layer behind an education center: content, assignments, testing, groups and learning analytics in one place.</p>
+            <a class="button button-light" href="#contact" data-i18n="centers.cta">Discuss a pilot</a>
+          </div>
+          <div class="b2b-grid">
+            <article><span class="b2b-icon">⌘</span><h3 data-i18n="centers.f1Title">Teacher workspace</h3><p data-i18n="centers.f1Text">Create courses, publish materials and manage assignments.</p></article>
+            <article><span class="b2b-icon">◎</span><h3 data-i18n="centers.f2Title">Student analytics</h3><p data-i18n="centers.f2Text">See weak topics, activity and progress across groups.</p></article>
+            <article><span class="b2b-icon">↗</span><h3 data-i18n="centers.f3Title">Center-level visibility</h3><p data-i18n="centers.f3Text">Give administrators one place to understand learning outcomes.</p></article>
+            <article><span class="b2b-icon">AI</span><h3 data-i18n="centers.f4Title">AI-assisted feedback</h3><p data-i18n="centers.f4Text">Scale explanations and feedback while keeping educators in control.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ai-section" id="ai">
+      <div class="container ai-grid">
+        <div class="ai-copy reveal">
+          <div class="eyebrow dark"><span class="eyebrow-dot"></span><span data-i18n="ai.eyebrow">AI where it is useful</span></div>
+          <h2 data-i18n="ai.title">AI does not replace the answer key. <span>It explains the gap.</span></h2>
+          <p data-i18n="ai.lead">The correct answer comes from verified learning content. AI helps interpret the student's mistake, explain the concept and suggest the next learning action.</p>
+          <div class="ai-principles">
+            <div><span>01</span><p data-i18n="ai.p1">Grounded in course content</p></div>
+            <div><span>02</span><p data-i18n="ai.p2">Focused on explanation, not guessing</p></div>
+            <div><span>03</span><p data-i18n="ai.p3">Designed for teacher visibility</p></div>
+          </div>
+        </div>
+        <div class="ai-demo reveal delay-1">
+          <div class="ai-demo-top"><span class="ai-demo-badge">AI</span><span data-i18n="ai.demoLabel">Mistake review</span><span class="status-dot">●</span></div>
+          <div class="answer-compare">
+            <div><small data-i18n="ai.yourAnswer">Your answer</small><strong>B</strong></div>
+            <div><small data-i18n="ai.correctAnswer">Correct answer</small><strong>C</strong></div>
+          </div>
+          <div class="analysis-box">
+            <small data-i18n="ai.why">What went wrong</small>
+            <p data-i18n="ai.demoText">You remembered the right period, but mixed up the sequence of two events. Put them on a short timeline and compare the dates before answering again.</p>
+          </div>
+          <div class="ai-demo-actions">
+            <button data-i18n="ai.action1">Explain simpler</button>
+            <button data-i18n="ai.action2">Give me a similar question</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section build-section" id="about">
+      <div class="container">
+        <div class="build-head reveal">
+          <div>
+            <div class="eyebrow dark"><span class="eyebrow-dot"></span><span data-i18n="about.eyebrow">Built, not just pitched</span></div>
+            <h2 data-i18n="about.title">TASTAMA is already being built as a real learning platform.</h2>
+          </div>
+          <p data-i18n="about.lead">Our current product foundation includes student, teacher and admin flows, testing, learning content, analytics, and an AI service layer. The public website is the front door; the product lives separately and can be deployed under its own subdomain.</p>
+        </div>
+        <div class="build-grid">
+          <div class="build-card"><span>01</span><h3 data-i18n="about.c1Title">Learning platform</h3><p data-i18n="about.c1Text">Courses, theory, quizzes, assignments and study flows.</p></div>
+          <div class="build-card"><span>02</span><h3 data-i18n="about.c2Title">UNT assessment</h3><p data-i18n="about.c2Text">Mock exams, practice and result analysis.</p></div>
+          <div class="build-card"><span>03</span><h3 data-i18n="about.c3Title">Teacher tools</h3><p data-i18n="about.c3Text">Groups, content management and student progress.</p></div>
+          <div class="build-card"><span>04</span><h3 data-i18n="about.c4Title">AI layer</h3><p data-i18n="about.c4Text">Mistake explanations, weak-topic analysis and guided next steps.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section vision-section">
+      <div class="container vision-shell reveal">
+        <div class="vision-word">TASTAMA</div>
+        <div class="vision-copy">
+          <div class="eyebrow light"><span class="eyebrow-dot"></span><span data-i18n="vision.eyebrow">Our direction</span></div>
+          <h2 data-i18n="vision.title">A learning operating system for Kazakhstan's education market.</h2>
+          <p data-i18n="vision.text">We start with UNT preparation, where the problem is concrete and measurable. From there, TASTAMA can serve both direct learners and education organizations that need better digital infrastructure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-shell reveal">
+        <div>
+          <div class="eyebrow dark"><span class="eyebrow-dot"></span><span data-i18n="contact.eyebrow">Early-stage, shipping fast</span></div>
+          <h2 data-i18n="contact.title">Want to see the product or work with TASTAMA?</h2>
+          <p data-i18n="contact.text">We are building the first version with a focus on real UNT content, student feedback loops and education-center analytics.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary js-contact-link" href="#" data-i18n="contact.primary">Contact the team</a>
+          <a class="button button-dark js-platform-link" href="#product" data-i18n="contact.secondary">View product</a>
+          <small data-i18n="contact.note">Open to early pilot and technology partnerships.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#top"><span class="brand-mark">T</span><span class="brand-word">TASTAMA</span></a>
+        <p data-i18n="footer.tagline">AI-powered preparation for the Unified National Testing.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#product" data-i18n="nav.product">Product</a>
+        <a href="#centers" data-i18n="nav.centers">Education centers</a>
+        <a href="#ai" data-i18n="nav.ai">AI</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+      </div>
+      <div class="footer-meta">
+        <span data-i18n="footer.location">Built in Kazakhstan</span>
+        <span>© <span id="year"></span> TASTAMA</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
