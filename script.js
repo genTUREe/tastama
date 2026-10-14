@@ -109,11 +109,12 @@
       track('language_changed');
     }
   }
-  // An explicit theme choice is remembered; otherwise the page follows the system setting.
+  // The page follows the system theme. A manual choice lasts only for this tab's session,
+  // and a later change of the system theme always wins over it.
   const themeToggle = $('.theme-toggle');
   const systemDark = matchMedia('(prefers-color-scheme:dark)');
   let savedTheme;
-  try {savedTheme = localStorage.getItem('tastama-theme');} catch { /* Preference is optional. */ }
+  try {savedTheme = sessionStorage.getItem('tastama-theme');} catch { /* Preference is optional. */ }
   function applyTheme(theme) {
     html.dataset.theme = theme;
     const key = theme === 'dark' ? 'a11y.themeLight' : 'a11y.themeDark';
@@ -123,7 +124,7 @@
   applyTheme(['light','dark'].includes(savedTheme) ? savedTheme : systemDark.matches ? 'dark' : 'light');
   themeToggle.addEventListener('click', () => {
     savedTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-    try {localStorage.setItem('tastama-theme', savedTheme);} catch { /* Storage may be disabled. */ }
+    try {sessionStorage.setItem('tastama-theme', savedTheme);} catch { /* Storage may be disabled. */ }
     track('theme_changed', {theme: savedTheme});
     // The new theme spreads as a circular wave from the toggle; unsupported browsers and reduced motion switch instantly.
     if (!document.startViewTransition || matchMedia('(prefers-reduced-motion:reduce)').matches) {
@@ -144,7 +145,9 @@
     }).catch(() => { /* The theme is already applied if the animation cannot run. */ });
   });
   systemDark.addEventListener('change', event => {
-    if (!['light','dark'].includes(savedTheme)) applyTheme(event.matches ? 'dark' : 'light');
+    savedTheme = null;
+    try {sessionStorage.removeItem('tastama-theme');} catch { /* Storage may be disabled. */ }
+    applyTheme(event.matches ? 'dark' : 'light');
   });
   let savedLanguage;
   try {savedLanguage = localStorage.getItem('tastama-lang');} catch { /* Preference is optional. */ }
