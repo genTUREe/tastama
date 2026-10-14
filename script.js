@@ -109,6 +109,27 @@
       track('language_changed');
     }
   }
+  // An explicit theme choice is remembered; otherwise the page follows the system setting.
+  const themeToggle = $('.theme-toggle');
+  const systemDark = matchMedia('(prefers-color-scheme:dark)');
+  let savedTheme;
+  try {savedTheme = localStorage.getItem('tastama-theme');} catch { /* Preference is optional. */ }
+  function applyTheme(theme) {
+    html.dataset.theme = theme;
+    const key = theme === 'dark' ? 'a11y.themeLight' : 'a11y.themeDark';
+    themeToggle.dataset.i18nAria = key;
+    themeToggle.setAttribute('aria-label', t(key));
+  }
+  applyTheme(['light','dark'].includes(savedTheme) ? savedTheme : systemDark.matches ? 'dark' : 'light');
+  themeToggle.addEventListener('click', () => {
+    savedTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    try {localStorage.setItem('tastama-theme', savedTheme);} catch { /* Storage may be disabled. */ }
+    applyTheme(savedTheme);
+    track('theme_changed', {theme: savedTheme});
+  });
+  systemDark.addEventListener('change', event => {
+    if (!['light','dark'].includes(savedTheme)) applyTheme(event.matches ? 'dark' : 'light');
+  });
   let savedLanguage;
   try {savedLanguage = localStorage.getItem('tastama-lang');} catch { /* Preference is optional. */ }
   const queryLanguage = new URL(location.href).searchParams.get('lang');
