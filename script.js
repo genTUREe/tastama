@@ -124,8 +124,24 @@
   themeToggle.addEventListener('click', () => {
     savedTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
     try {localStorage.setItem('tastama-theme', savedTheme);} catch { /* Storage may be disabled. */ }
-    applyTheme(savedTheme);
     track('theme_changed', {theme: savedTheme});
+    // The new theme spreads as a circular wave from the toggle; unsupported browsers and reduced motion switch instantly.
+    if (!document.startViewTransition || matchMedia('(prefers-reduced-motion:reduce)').matches) {
+      applyTheme(savedTheme);
+      return;
+    }
+    const box = themeToggle.getBoundingClientRect();
+    const x = box.left + box.width / 2;
+    const y = box.top + box.height / 2;
+    const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+    const theme = savedTheme;
+    const transition = document.startViewTransition(() => applyTheme(theme));
+    transition.ready.then(() => {
+      html.animate(
+        {clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`]},
+        {duration: 700, easing: 'cubic-bezier(.55,0,.25,1)', pseudoElement: '::view-transition-new(root)'}
+      );
+    }).catch(() => { /* The theme is already applied if the animation cannot run. */ });
   });
   systemDark.addEventListener('change', event => {
     if (!['light','dark'].includes(savedTheme)) applyTheme(event.matches ? 'dark' : 'light');

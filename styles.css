@@ -29,6 +29,7 @@
 .browser-bar,.footer-bottom{color:#626b82}.dialog-open{overflow:hidden}#contact-fields{border:0;margin:0;padding:0;min-width:0}
 /* Theme toggle */
 .theme-toggle{display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);flex-shrink:0;transition:color .2s,border-color .2s}.theme-toggle:hover{color:var(--blue-dark);border-color:#c9cff0}.theme-toggle .icon{width:18px;height:18px}.theme-toggle .i-sun,[data-theme="dark"] .theme-toggle .i-moon{display:none}[data-theme="dark"] .theme-toggle .i-sun{display:block}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
 @media(max-width:699px){.theme-toggle{width:38px;height:38px}}
 @media(max-width:370px){.theme-toggle{width:34px;height:38px}}
 /* Dark theme: overrides only, so the light theme stays exactly as authored. Print always uses the light theme. */
