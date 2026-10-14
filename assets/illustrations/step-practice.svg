@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img" aria-labelledby="title"><title id="title">Practice with purpose; decorative illustration, not a product screenshot</title><defs>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5865e8"/><stop offset="1" stop-color="#7861df"/></linearGradient>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f2ff"/><stop offset="1" stop-color="#f6f1ff"/></linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5865e8" stop-opacity=".18"/><stop offset="1" stop-color="#5865e8" stop-opacity="0"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#35447e" flood-opacity=".07"/></filter>
+</defs><circle cx="80" cy="67" r="53" fill="url(#wash)"/><circle cx="136" cy="25" r="4" fill="#d4ef8a"/>
+<circle cx="80" cy="71" r="39" fill="#fff" stroke="#dce1fa"/><circle cx="80" cy="71" r="27" fill="#f0f2ff" stroke="#aab4f2"/><circle cx="80" cy="71" r="15" fill="#fff" stroke="#5865e8" stroke-width="2"/><circle cx="80" cy="71" r="5" fill="url(#blue)"/>
+<path d="m82 69 36-36m-2-6-2 9 10 1" fill="none" stroke="#7861df" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="m113 39 1-12 7-7 1 10 10 1-7 7Z" fill="#d4ef8a" stroke="#7861df" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>

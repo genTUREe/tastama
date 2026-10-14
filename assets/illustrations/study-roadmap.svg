@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title"><title id="title">A path through learning; decorative illustration, not a product screenshot</title><defs>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5865e8"/><stop offset="1" stop-color="#7861df"/></linearGradient>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f2ff"/><stop offset="1" stop-color="#f6f1ff"/></linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5865e8" stop-opacity=".18"/><stop offset="1" stop-color="#5865e8" stop-opacity="0"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#35447e" flood-opacity=".07"/></filter>
+</defs>
+<circle cx="323" cy="243" r="176" fill="url(#wash)"/>
+<path d="M126 350h72c68 0 31-117 102-117h42c66 0 32-114 105-114h64" fill="none" stroke="#d4dafa" stroke-width="3" stroke-dasharray="5 9" stroke-linecap="round"/>
+<path d="M126 350h72c68 0 31-117 102-117h42" fill="none" stroke="url(#blue)" stroke-width="4" stroke-linecap="round"/>
+<g filter="url(#shadow)"><rect x="74" y="300" width="122" height="101" rx="20" fill="#fff" stroke="#e0e4fb"/><rect x="264" y="181" width="122" height="101" rx="20" fill="#fff" stroke="#e0e4fb"/><rect x="446" y="66" width="122" height="101" rx="20" fill="#fff" stroke="#e0e4fb"/></g>
+<rect x="95" y="319" width="38" height="38" rx="12" fill="#eef0ff"/>
+<path d="M105 329h19v20h-19zM110 334h9m-9 5h9m-9 5h5" fill="none" stroke="#5865e8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="95" y="376" width="73" height="6" rx="3" fill="#d6daf0"/>
+<rect x="285" y="200" width="38" height="38" rx="12" fill="url(#blue)"/>
+<path d="m294 219 7 7 13-15" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="285" y="257" width="73" height="6" rx="3" fill="#d6daf0"/>
+<rect x="467" y="85" width="38" height="38" rx="12" fill="#d4ef8a"/>
+<path d="M479 113V95l15 4-15 5" fill="none" stroke="#405230" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="467" y="142" width="73" height="6" rx="3" fill="#d6daf0"/>
+<circle cx="211" cy="139" r="6" fill="#bdc4fb"/><circle cx="505" cy="351" r="6" fill="#d4ef8a"/><path d="M373 375h14m-7-7v14" stroke="#9a9fe6" stroke-width="2" stroke-linecap="round"/>
+</svg>

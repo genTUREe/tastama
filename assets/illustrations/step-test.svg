@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img" aria-labelledby="title"><title id="title">Take a practice test; decorative illustration, not a product screenshot</title><defs>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5865e8"/><stop offset="1" stop-color="#7861df"/></linearGradient>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f2ff"/><stop offset="1" stop-color="#f6f1ff"/></linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5865e8" stop-opacity=".18"/><stop offset="1" stop-color="#5865e8" stop-opacity="0"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#35447e" flood-opacity=".07"/></filter>
+</defs><circle cx="80" cy="67" r="53" fill="url(#wash)"/><circle cx="136" cy="25" r="4" fill="#d4ef8a"/>
+<rect x="49" y="28" width="67" height="88" rx="13" fill="#fff" stroke="#dce1fa"/>
+<rect x="66" y="22" width="33" height="13" rx="5" fill="url(#blue)"/>
+<circle cx="66" cy="52" r="5" fill="#5865e8"/><path d="m63 52 2 2 4-5" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<rect x="79" y="49" width="23" height="5" rx="2.5" fill="#cdd4f3"/>
+<circle cx="66" cy="74" r="5" fill="#e5e9fc"/><rect x="79" y="71" width="23" height="5" rx="2.5" fill="#cdd4f3"/>
+<circle cx="66" cy="96" r="5" fill="#e5e9fc"/><rect x="79" y="93" width="23" height="5" rx="2.5" fill="#cdd4f3"/>
+</svg>

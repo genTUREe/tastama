@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" role="img" aria-labelledby="title"><title id="title">See learning progress; decorative illustration, not a product screenshot</title><defs>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5865e8"/><stop offset="1" stop-color="#7861df"/></linearGradient>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f2ff"/><stop offset="1" stop-color="#f6f1ff"/></linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5865e8" stop-opacity=".18"/><stop offset="1" stop-color="#5865e8" stop-opacity="0"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#35447e" flood-opacity=".07"/></filter>
+</defs><circle cx="80" cy="67" r="53" fill="url(#wash)"/><circle cx="136" cy="25" r="4" fill="#d4ef8a"/>
+<rect x="32" y="31" width="99" height="81" rx="14" fill="#fff" stroke="#dce1fa"/>
+<path d="M48 52h67M48 73h67M48 94h67" stroke="#edf0f8"/>
+<path d="M48 90c9 0 12-18 23-16s15 4 21-8 13-3 23-18V96H48Z" fill="url(#area)"/>
+<path d="M48 90c9 0 12-18 23-16s15 4 21-8 13-3 23-18" stroke="url(#blue)" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="115" cy="48" r="5" fill="#d4ef8a" stroke="#7861df" stroke-width="2"/>
+</svg>
