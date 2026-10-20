@@ -26,6 +26,11 @@
     {name:'teacher-analytics',width:1200,height:640}
   ];
   const contactEmail = utils.verifiedContact(config);
+  const accessKey = utils.formAccessKey(config);
+  const submitKey = accessKey ? 'contact.send' : 'contact.submit';
+  // With automatic sending, copy that promises a local-only draft is swapped for accurate wording.
+  const sendingCopy = {'contact.submit':'contact.send','contact.lead':'contact.leadSend','contact.dataNote':'contact.dataNoteSend','privacy.formTitle':'privacy.formTitleSend','privacy.formText':'privacy.formTextSend','privacy.contactText':'privacy.contactTextSend'};
+  if (accessKey) $$('[data-i18n]').forEach(element => {if (sendingCopy[element.dataset.i18n]) element.dataset.i18n = sendingCopy[element.dataset.i18n];});
   const appUrl = utils.safeAppUrl(config);
   const form = $('#contact-form');
   const submitButton = $('.form-submit');
@@ -284,7 +289,7 @@
     $('#contact-notice').hidden = Boolean(contactEmail);
     const emailLink = $('#verified-email');emailLink.hidden = !contactEmail;
     if(contactEmail) {emailLink.href = utils.mailtoUrl(contactEmail,'','');emailLink.textContent = contactEmail;}
-    if(preparing) $('.form-submit [data-i18n]').textContent = t('contact.loading');
+    if(preparing) $('.form-submit [data-i18n]').textContent = t(accessKey ? 'contact.sending' : 'contact.loading');
   }
   function setStatus(key, error = false) {
     statusKey = key;$('#form-status').textContent = key ? t(key) : '';
@@ -297,9 +302,11 @@
       $(`#contact-${field}`).setAttribute('aria-invalid',String(Boolean(errors[field])));
     }
   }
+  function currentSubject() {
+    return t({demo:'contact.demoSubject',pilot:'contact.pilotSubject',general:'contact.generalSubject'}[intentSelect.value]);
+  }
   function updateDraft() {
-    const subjectKey = {demo:'contact.demoSubject',pilot:'contact.pilotSubject',general:'contact.generalSubject'}[intentSelect.value];
-    const subject = t(subjectKey);
+    const subject = currentSubject();
     const draft = utils.makeDraft(draftData, copy[language], subject);
     $('#request-draft').value = draft;
     const emailButton = $('#mailto-draft'); emailButton.hidden = !contactEmail;
@@ -322,15 +329,32 @@
     }
     if(Date.now() - lastPrepared < 2500) {setStatus('contact.tooFast',true);return;}
     preparing = true;submitButton.disabled = true;form.setAttribute('aria-busy','true');
-    setStatus('contact.loading');$('.form-submit [data-i18n]').textContent = t('contact.loading');
+    const busyKey = accessKey ? 'contact.sending' : 'contact.loading';
+    setStatus(busyKey);$('.form-submit [data-i18n]').textContent = t(busyKey);
+    const showDraft = () => {draftData = data;updateDraft();$('#draft-result').hidden = false;};
     try {
-      // Let the browser paint the local preparing state; there is no network call.
       await new Promise(resolve => requestAnimationFrame(resolve));
-      draftData = data;updateDraft();$('#draft-result').hidden = false;
+      if(accessKey) {
+        // Web3Forms emails the request to the verified team mailbox; the visitor's email becomes the reply-to.
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method:'POST', headers:{'Content-Type':'application/json',Accept:'application/json'}, signal:AbortSignal.timeout(15000),
+          body:JSON.stringify({access_key:accessKey,subject:currentSubject(),from_name:'TASTAMA website',name:data.name.trim(),organization:(data.organization||'').trim(),email:data.email.trim(),message:data.message.trim(),interest:intentSelect.selectedOptions[0].textContent,language,botcheck:''})
+        });
+        const result = await response.json().catch(() => ({}));
+        if(!response.ok || !result.success) throw new Error('Delivery failed');
+        form.reset();draftData = null;$('#draft-result').hidden = true;
+        setStatus('contact.sent');lastPrepared = Date.now();track('contact_sent',{intent:data.intent});
+        return;
+      }
+      showDraft();
       setStatus(contactEmail ? 'contact.ready' : 'contact.unavailable');
       lastPrepared = Date.now();track('contact_draft_prepared',{intent:intentSelect.value});
-    } catch {setStatus('contact.error',true);}
-    finally {preparing=false;submitButton.disabled=false;form.removeAttribute('aria-busy');$('.form-submit [data-i18n]').textContent=t('contact.submit');}
+    } catch {
+      // A failed delivery never loses the request: the visitor gets the same draft and email handoff.
+      if(accessKey) {showDraft();setStatus('contact.sendError',true);track('contact_send_failed',{intent:data.intent});}
+      else setStatus('contact.error',true);
+    }
+    finally {preparing=false;submitButton.disabled=false;form.removeAttribute('aria-busy');$('.form-submit [data-i18n]').textContent=t(submitKey);}
   });
   $('#copy-draft').addEventListener('click', async () => {
     try {await navigator.clipboard.writeText($('#request-draft').value);setStatus('contact.copied');track('contact_draft_copied',{intent:intentSelect.value});}

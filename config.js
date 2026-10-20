@@ -4,8 +4,11 @@ window.TASTAMA_CONFIG = {
   siteUrl: "https://tastama.tech",
   appUrl: "",
   appUrlVerified: false,
-  contactEmail: "",
-  contactEmailVerified: false,
+  contactEmail: "hello@tastama.tech",
+  contactEmailVerified: true,
+  // Public Web3Forms access key. It can only deliver to the mailbox it was issued for,
+  // so it is safe in this public file. Empty keeps the draft-only contact form.
+  contactFormAccessKey: "78a4c044-d62e-41fe-98e4-ad8a41b61e19",
   company: {
     name: "TASTAMA",
     industry: "EdTech / AI-powered Education",

@@ -208,6 +208,12 @@ window.TASTAMA_COPY = {
     "contact.privacyLink": "Read the privacy notice",
     "contact.noSensitive": "Please do not include sensitive personal information or student records.",
     "contact.dataNote": "Your draft stays in this page until you copy, download or open it in an email app. The form does not automatically send or store it on a server.",
+    "contact.send": "Send request",
+    "contact.sending": "Sending your request…",
+    "contact.sent": "Thank you! Your request has been sent. We will reply to the email you provided.",
+    "contact.sendError": "We couldn't send your request automatically. Your draft is ready below: open it in your email app or copy it.",
+    "contact.leadSend": "Tell us about your interest in a demo, a future pilot or a partnership. We will reply to the email you provide.",
+    "contact.dataNoteSend": "Your request is delivered to the TASTAMA team by email through the Web3Forms service. The website itself does not store it.",
     "footer.tagline": "Building clearer paths to UNT preparation.",
     "footer.location": "Astana, Kazakhstan",
     "footer.privacy": "Privacy notice",
@@ -227,6 +233,9 @@ window.TASTAMA_COPY = {
     "privacy.hostingText": "Your browser requests this page and its assets from the website's host. The host can process technical request data, including an IP address, under its own policies.",
     "privacy.contactTitle": "Contact channel",
     "privacy.contactText": "A corporate contact email has not yet been verified. The website will connect a contact channel after it has been checked. Until then, prepared drafts are not delivered to the team.",
+    "privacy.formTitleSend": "Contact requests",
+    "privacy.formTextSend": "When you send the form, your name, organization, email and message are transmitted to Web3Forms, a third-party form service that delivers them to the TASTAMA team by email. Web3Forms processes this data under its own policies. If sending fails, the form prepares a draft in your browser instead.",
+    "privacy.contactTextSend": "Requests from the website and letters to hello@tastama.tech are received by the TASTAMA team mailbox.",
     "privacy.close": "Close privacy notice"
   },
   ru: {
@@ -437,6 +446,12 @@ window.TASTAMA_COPY = {
     "contact.privacyLink": "Уведомление о конфиденциальности",
     "contact.noSensitive": "Не указывайте чувствительные персональные данные или сведения об учениках.",
     "contact.dataNote": "Черновик остаётся на этой странице, пока вы не скопируете, не скачаете или не откроете его в почтовом приложении. Форма не отправляет его автоматически и не сохраняет на сервере.",
+    "contact.send": "Отправить заявку",
+    "contact.sending": "Отправляем заявку…",
+    "contact.sent": "Спасибо! Заявка отправлена. Мы ответим на указанную вами почту.",
+    "contact.sendError": "Не удалось отправить заявку автоматически. Ниже готов черновик: откройте его в почтовом приложении или скопируйте.",
+    "contact.leadSend": "Расскажите об интересе к демо, будущему пилоту или партнёрству. Мы ответим на указанную вами почту.",
+    "contact.dataNoteSend": "Заявка доставляется команде TASTAMA по email через сервис Web3Forms. Сам сайт её не хранит.",
     "footer.tagline": "Создаём понятный путь подготовки к ЕНТ.",
     "footer.location": "Астана, Казахстан",
     "footer.privacy": "Конфиденциальность",
@@ -456,6 +471,9 @@ window.TASTAMA_COPY = {
     "privacy.hostingText": "Ваш браузер запрашивает страницу и её ресурсы у хостинга сайта. Хостинг может обрабатывать технические данные запросов, включая IP-адрес, в соответствии со своими правилами.",
     "privacy.contactTitle": "Канал связи",
     "privacy.contactText": "Корпоративный email для связи пока не проверен. Сайт подключит канал связи после проверки. До этого подготовленные черновики не доставляются команде.",
+    "privacy.formTitleSend": "Заявки с сайта",
+    "privacy.formTextSend": "При отправке формы ваше имя, организация, email и сообщение передаются Web3Forms — стороннему сервису форм, который доставляет их команде TASTAMA по электронной почте. Web3Forms обрабатывает эти данные по своим правилам. Если отправка не удалась, форма вместо этого подготовит черновик в вашем браузере.",
+    "privacy.contactTextSend": "Заявки с сайта и письма на hello@tastama.tech получает почтовый ящик команды TASTAMA.",
     "privacy.close": "Закрыть уведомление о конфиденциальности"
   },
   kk: {
@@ -666,6 +684,12 @@ window.TASTAMA_COPY = {
     "contact.privacyLink": "Құпиялық туралы хабарламаны оқу",
     "contact.noSensitive": "Құпия жеке деректерді немесе оқушылар туралы мәліметтерді қоспаңыз.",
     "contact.dataNote": "Хабарлама жобасы сіз оны көшіргенше, жүктеп алғанша немесе пошта қолданбасында ашқанша осы бетте қалады. Форма оны автоматты түрде жібермейді және серверде сақтамайды.",
+    "contact.send": "Өтінімді жіберу",
+    "contact.sending": "Өтінім жіберіліп жатыр…",
+    "contact.sent": "Рахмет! Өтінім жіберілді. Сіз көрсеткен поштаға жауап береміз.",
+    "contact.sendError": "Өтінімді автоматты түрде жіберу мүмкін болмады. Төменде хат жобасы дайын: оны пошта қолданбасында ашыңыз немесе көшіріңіз.",
+    "contact.leadSend": "Демоға, болашақ пилотқа немесе серіктестікке қызығушылығыңыз туралы жазыңыз. Біз сіз көрсеткен поштаға жауап береміз.",
+    "contact.dataNoteSend": "Өтінім TASTAMA командасына Web3Forms сервисі арқылы электрондық поштамен жеткізіледі. Сайттың өзі оны сақтамайды.",
     "footer.tagline": "ҰБТ-ға дайындықтың түсінікті жолын құрып жатырмыз.",
     "footer.location": "Астана, Қазақстан",
     "footer.privacy": "Құпиялық",
@@ -685,6 +709,9 @@ window.TASTAMA_COPY = {
     "privacy.hostingText": "Браузеріңіз бет пен оның ресурстарын сайттың хостингінен сұратады. Хостинг сұраулардың техникалық деректерін, соның ішінде IP мекенжайын, өз ережелеріне сәйкес өңдей алады.",
     "privacy.contactTitle": "Байланыс арнасы",
     "privacy.contactText": "Корпоративтік байланыс поштасы әзірге тексерілген жоқ. Байланыс арнасы тексерілгеннен кейін сайтқа қосылады. Оған дейін дайындалған хабарлама жобалары командаға жеткізілмейді.",
+    "privacy.formTitleSend": "Сайттағы өтінімдер",
+    "privacy.formTextSend": "Форманы жібергенде атыңыз, ұйымыңыз, электрондық поштаңыз және хабарламаңыз Web3Forms сыртқы форма сервисіне беріледі, ол оларды TASTAMA командасына электрондық пошта арқылы жеткізеді. Web3Forms бұл деректерді өз ережелері бойынша өңдейді. Жіберу сәтсіз болса, форма оның орнына браузеріңізде хат жобасын дайындайды.",
+    "privacy.contactTextSend": "Сайттан келген өтінімдер мен hello@tastama.tech поштасына жазылған хаттарды TASTAMA командасының пошта жәшігі қабылдайды.",
     "privacy.close": "Құпиялық туралы хабарламаны жабу"
   }
 };
