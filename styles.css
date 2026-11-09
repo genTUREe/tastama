@@ -53,3 +53,5 @@
 [data-theme="dark"] dialog{background:var(--surface);border-color:var(--line);box-shadow:0 30px 100px #000}[data-theme="dark"] dialog::backdrop{background:#000000c0}[data-theme="dark"] .image-dialog-toolbar,[data-theme="dark"] .image-dialog-bottom{background:var(--surface)}[data-theme="dark"] .icon-button{border-color:var(--line);background:var(--surface-2)}[data-theme="dark"] .icon-button:hover{background:#242d52}[data-theme="dark"] .image-dialog-content{background:#0b101e}[data-theme="dark"] .image-dialog-content>img{border-color:var(--line)}
 }
 @media print{.site-header,.hero-actions,.contact-form,.site-footer,.image-dialog,.privacy-dialog{display:none!important}.section{padding:30px 0}.reveal{opacity:1!important;transform:none!important}.container{width:100%}.centers-shell{background:#fff;color:var(--ink)}.centers-copy p,.center-features span{color:var(--muted)}}
+
+.centers-copy>.microcopy{font-size:12px}
