@@ -1,4 +1,4 @@
-/* TASTAMA public website. No product APIs, external trackers or form POSTs. */
+/* Public marketing site; contact requests optionally submit through Web3Forms. */
 (() => {
   'use strict';
   const config = window.TASTAMA_CONFIG || {};
@@ -20,10 +20,10 @@
   let lastPrepared = 0;
   const t = key => copy[language]?.[key] || copy.en[key] || key;
   const screens = [
-    {name:'student-dashboard',width:1200,height:800},
+    {name:'student-dashboard-demo',width:1440,height:1000},
     {name:'unt-test',width:1200,height:900},
     {name:'test-results',width:1200,height:1240},
-    {name:'teacher-analytics',width:1200,height:640}
+    {name:'teacher-lms-analytics-demo',width:1440,height:1000}
   ];
   const contactEmail = utils.verifiedContact(config);
   const accessKey = utils.formAccessKey(config);
